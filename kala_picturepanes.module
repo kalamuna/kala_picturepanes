@@ -19,7 +19,31 @@ function kala_picturepanes_entity_info_alter(&$entity_info) {
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/kala_picturepanes_fulll',
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/kala_picturepanes_full',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+  $entity_info['fieldable_panels_pane']['bundles']['kala_picturepanes_half'] = array(
+    'label' => t('Add half width responsive image, 6 columns'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_image.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/kala_picturepanes_half',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+  $entity_info['fieldable_panels_pane']['bundles']['kala_picturepanes_quarter'] = array(
+    'label' => t('Add quarter width responsive image, 3 columns'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_image.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/kala_picturepanes_quarter',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
