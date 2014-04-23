@@ -1,0 +1,11 @@
+name = Kalamuna Picture Panes
+description =
+core = 7.x
+package = Kalamuna
+php = 5.2.4
+version = 7.x-1.0-alpha1
+project = kala_picturepanes
+dependencies[] = ctools
+dependencies[] = defaultconfig
+dependencies[] = features
+dependencies[] = fieldable_panels_panes
