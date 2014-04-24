@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the Kalamuna Widgets feature.
+ * Code for the Kalamuna Picture Pane for responsive images across multiple pages
  */
 
 include_once 'kala_picturepanes.features.inc';
@@ -46,5 +46,35 @@ function kala_picturepanes_entity_info_alter(&$entity_info) {
       'real path' => 'admin/structure/fieldable-panels-panes/manage/kala_picturepanes_quarter',
       'access arguments' => array('administer fieldable panels panes'),
     ),
+  );
+}
+
+
+/**
+ * Implements hook_preprocess_panels_pane().
+ */
+function kala_picturepanes_preprocess_panels_pane(&$variables){
+  if(isset($variables['content']['#bundle'])){
+    $bundle = $variables['content']['#bundle'];
+    if(strpos($bundle, 'kala_picturepanes') === 0){
+
+      $variables['theme_hook_suggestions'][] = 'fieldable_panels_panes__kala_picturepanes';
+      
+    }
+
+  }
+}
+
+
+
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function kala_picturepanes_theme_registry_alter(&$theme_registry) {
+  $theme_registry['fieldable_panels_panes__kala_picturepanes'] = array(
+    'template' => drupal_get_path('module', 'kala_picturepanes') . '/templates/fieldable-panels-panes--kala-picturepanes',
+    'theme path' => drupal_get_path('module', 'kala_picturepanes'),
+    'type' => 'module',
   );
 }
