@@ -12,9 +12,9 @@ include_once 'kala_picturepanes.features.inc';
 function kala_picturepanes_entity_info_alter(&$entity_info) {
   // Fieldable panel pane bundle to support picture panes
   $entity_info['fieldable_panels_pane']['bundles']['kala_picturepanes_jumbotron'] = array(
-    'label' => t('Jumbotron images, 100% of the screen'),
-    'pane category' => t('Custom'),
-    'pane top level' => TRUE,
+    'label' => t('Add full screen width responseive image'),
+    'pane category' => t('Media'),
+    'pane top level' => False,
     'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_image.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
@@ -24,9 +24,9 @@ function kala_picturepanes_entity_info_alter(&$entity_info) {
     ),
   );
   $entity_info['fieldable_panels_pane']['bundles']['kala_picturepanes_full'] = array(
-    'label' => t('Add full width responsive image, 12 columns'),
-    'pane category' => t('Custom'),
-    'pane top level' => TRUE,
+    'label' => t('Add full content width image, 12 columns'),
+    'pane category' => t('Media'),
+    'pane top level' => False,
     'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_image.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
@@ -36,9 +36,9 @@ function kala_picturepanes_entity_info_alter(&$entity_info) {
     ),
   );
   $entity_info['fieldable_panels_pane']['bundles']['kala_picturepanes_half'] = array(
-    'label' => t('Add half width responsive image, 6 columns'),
-    'pane category' => t('Custom'),
-    'pane top level' => TRUE,
+    'label' => t('Add half content width responsive image, 6 columns'),
+    'pane category' => t('Media'),
+    'pane top level' => False,
     'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_image.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
@@ -48,9 +48,9 @@ function kala_picturepanes_entity_info_alter(&$entity_info) {
     ),
   );
   $entity_info['fieldable_panels_pane']['bundles']['kala_picturepanes_quarter'] = array(
-    'label' => t('Add quarter width responsive image, 3 columns'),
-    'pane category' => t('Custom'),
-    'pane top level' => TRUE,
+    'label' => t('Add quarter content width responsive image, 3 columns'),
+    'pane category' => t('Media'),
+    'pane top level' => False,
     'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_image.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
