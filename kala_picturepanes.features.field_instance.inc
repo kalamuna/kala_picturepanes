@@ -191,7 +191,7 @@ function kala_picturepanes_field_default_field_instances() {
     'bundle' => 'kala_picturepanes_jumbotron',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => '<p>Provide optional text here using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption" title="Mozillar HTML Reference">figcaption</a> element.</p>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
