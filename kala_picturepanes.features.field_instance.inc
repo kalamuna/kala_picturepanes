@@ -186,6 +186,84 @@ function kala_picturepanes_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'fieldable_panels_pane-kala_picturepanes_jumbotron-field_kala_picturepanes_caption'
+  $field_instances['fieldable_panels_pane-kala_picturepanes_jumbotron-field_kala_picturepanes_caption'] = array(
+    'bundle' => 'kala_picturepanes_jumbotron',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_kala_picturepanes_caption',
+    'label' => 'Caption',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'fieldable_panels_pane-kala_picturepanes_jumbotron-field_kala_picturepanes_image'
+  $field_instances['fieldable_panels_pane-kala_picturepanes_jumbotron-field_kala_picturepanes_image'] = array(
+    'bundle' => 'kala_picturepanes_jumbotron',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'picture',
+        'settings' => array(
+          'colorbox' => 'kalapicture_jumbotron',
+          'fallback_image_style' => 'kalapicture_jumbotron',
+          'image_link' => '',
+          'picture_group' => 'kalapicture_jumbotron',
+        ),
+        'type' => 'picture',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_kala_picturepanes_image',
+    'label' => 'Jumbotron Image',
+    'required' => FALSE,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'fieldable_panels_pane-kala_picturepanes_quarter-field_kala_picturepanes_caption'
   $field_instances['fieldable_panels_pane-kala_picturepanes_quarter-field_kala_picturepanes_caption'] = array(
     'bundle' => 'kala_picturepanes_quarter',
@@ -295,6 +373,7 @@ function kala_picturepanes_field_default_field_instances() {
   t('Caption');
   t('Full Image');
   t('Half Image');
+  t('Jumbotron Image');
   t('Quarter Image');
 
   return $field_instances;
