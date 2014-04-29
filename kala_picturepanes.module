@@ -10,7 +10,19 @@ include_once 'kala_picturepanes.features.inc';
  * Implementation of hook_entity_info_alter()
  */
 function kala_picturepanes_entity_info_alter(&$entity_info) {
-  // Fieldable panel pane bundle to support call-to-action
+  // Fieldable panel pane bundle to support picture panes
+  $entity_info['fieldable_panels_pane']['bundles']['kala_picturepanes_jumbotron'] = array(
+    'label' => t('Jumbotron images, 100% of the screen'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_image.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/kala_picturepanes_jumbtron',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
   $entity_info['fieldable_panels_pane']['bundles']['kala_picturepanes_full'] = array(
     'label' => t('Add full width responsive image, 12 columns'),
     'pane category' => t('Custom'),
@@ -59,7 +71,7 @@ function kala_picturepanes_preprocess_panels_pane(&$variables){
     if(strpos($bundle, 'kala_picturepanes') === 0){
 
       $variables['theme_hook_suggestions'][] = 'fieldable_panels_panes__kala_picturepanes';
-      
+
     }
 
   }
