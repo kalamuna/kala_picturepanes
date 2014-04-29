@@ -354,6 +354,7 @@ function kala_picturepanes_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<p>Provide optional text here using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption" title="Mozillar HTML Reference">figcaption</a> element.</p>');
   t('<p>Provide optional text here using the <code><figcaption></code> element.</p>');
   t('<ul>
 <li>Provide alternative text, WebAIM Article: <em><a href="http://webaim.org/techniques/alttext/">Alternative Text</a></em></li>

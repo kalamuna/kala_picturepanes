@@ -555,6 +555,37 @@ function kala_picturepanes_defaultconfig_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_fieldable_panels_pane__kala_picturepanes_jumbotron';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+      ),
+      'display' => array(
+        'title' => array(
+          'default' => array(
+            'weight' => '-5',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_fieldable_panels_pane__kala_picturepanes_jumbotron'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_fieldable_panels_pane__kala_picturepanes_quarter';
   $strongarm->value = array(
     'view_modes' => array(
@@ -612,6 +643,13 @@ function kala_picturepanes_defaultconfig_user_default_permissions() {
     'module' => 'fieldable_panels_panes',
   );
 
+  // Exported permission: 'create fieldable kala_picturepanes_jumbotron'.
+  $permissions['create fieldable kala_picturepanes_jumbotron'] = array(
+    'name' => 'create fieldable kala_picturepanes_jumbotron',
+    'roles' => array(),
+    'module' => 'fieldable_panels_panes',
+  );
+
   // Exported permission: 'create fieldable kala_picturepanes_quarter'.
   $permissions['create fieldable kala_picturepanes_quarter'] = array(
     'name' => 'create fieldable kala_picturepanes_quarter',
@@ -642,6 +680,13 @@ function kala_picturepanes_defaultconfig_user_default_permissions() {
     'module' => 'fieldable_panels_panes',
   );
 
+  // Exported permission: 'delete fieldable kala_picturepanes_jumbotron'.
+  $permissions['delete fieldable kala_picturepanes_jumbotron'] = array(
+    'name' => 'delete fieldable kala_picturepanes_jumbotron',
+    'roles' => array(),
+    'module' => 'fieldable_panels_panes',
+  );
+
   // Exported permission: 'delete fieldable kala_picturepanes_quarter'.
   $permissions['delete fieldable kala_picturepanes_quarter'] = array(
     'name' => 'delete fieldable kala_picturepanes_quarter',
@@ -669,6 +714,13 @@ function kala_picturepanes_defaultconfig_user_default_permissions() {
       'administrator' => 'administrator',
       'editor' => 'editor',
     ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit fieldable kala_picturepanes_jumbotron'.
+  $permissions['edit fieldable kala_picturepanes_jumbotron'] = array(
+    'name' => 'edit fieldable kala_picturepanes_jumbotron',
+    'roles' => array(),
     'module' => 'fieldable_panels_panes',
   );
 
