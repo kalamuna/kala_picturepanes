@@ -646,7 +646,10 @@ function kala_picturepanes_defaultconfig_user_default_permissions() {
   // Exported permission: 'create fieldable kala_picturepanes_jumbotron'.
   $permissions['create fieldable kala_picturepanes_jumbotron'] = array(
     'name' => 'create fieldable kala_picturepanes_jumbotron',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
@@ -683,7 +686,10 @@ function kala_picturepanes_defaultconfig_user_default_permissions() {
   // Exported permission: 'delete fieldable kala_picturepanes_jumbotron'.
   $permissions['delete fieldable kala_picturepanes_jumbotron'] = array(
     'name' => 'delete fieldable kala_picturepanes_jumbotron',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
@@ -720,7 +726,10 @@ function kala_picturepanes_defaultconfig_user_default_permissions() {
   // Exported permission: 'edit fieldable kala_picturepanes_jumbotron'.
   $permissions['edit fieldable kala_picturepanes_jumbotron'] = array(
     'name' => 'edit fieldable kala_picturepanes_jumbotron',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
