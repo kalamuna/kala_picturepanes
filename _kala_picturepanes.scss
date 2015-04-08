@@ -1,4 +1,5 @@
-.pane-bundle-kala-picturepanes-jumbotron *[data-picture] img{
+.pane-bundle-kala-picturepanes-jumbotron picture img,
+.pane-bundle-kala-picturepanes-jumbotron *[data-picture] img {
   width: 100%;
   height: auto;
   vertical-align: middle;
